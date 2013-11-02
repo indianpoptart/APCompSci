@@ -109,10 +109,12 @@ public class HallOfFame {
 				}
 				System.out.println("What is the name of the " + i + suffix + " member");
 				String nameoMemb = scan.next();//Does not work at the moment
+				b1.setnameOfMembers(nameoMemb);
 			}
+			System.out.println("W");
 			
 			
-			hall();
+			hall();// goes back to main menu
 		}
 		else if(answer.equalsIgnoreCase("B")){
 			System.out.println("What is the band name you want to remove");

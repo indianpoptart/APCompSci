@@ -1,3 +1,5 @@
+package com.apcompsci.Club;
+
 
 /**
  * Write a description of class JParkAnimal here.
