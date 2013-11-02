@@ -5,8 +5,9 @@ public class Band
     //1.Class Variables    
     private String nameOfBand;
     private String[] members;
-    private static String genreOfBand;
+    private String genreOfBand;
     private int numberOfMembers;
+    private String nameOfMembers;
     private int numberOfSongs;
     private int numberOfAlbums;
     private boolean isActive;
@@ -35,7 +36,7 @@ public class Band
         nameOfBand = newName;
     }
     
-    public static void setGenre(String s)
+    public void setGenre(String s)
     {
         genreOfBand = s;
     }
@@ -43,6 +44,9 @@ public class Band
     public void setNumberOfMembers(int num)
     {
         numberOfMembers = num;
+    }
+    public void setnameOfMembers(String memberName){
+    	nameOfMembers = memberName;
     }
     
     //...

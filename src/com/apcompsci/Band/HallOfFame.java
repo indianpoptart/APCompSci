@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class HallOfFame {
+	private static final Object[] String = null;
 	private static Scanner scan;
 	static ArrayList<Band> bandList = new ArrayList();
 
@@ -45,7 +46,9 @@ public class HallOfFame {
 			String bandMember = scan.next();
 		}
 		else if(searchResponse.equalsIgnoreCase("C")){
-
+			System.out.println("Tell me genre");
+			searchResponse = scan.next();
+			
 		}
 		else if(searchResponse.equalsIgnoreCase("D")){
 			System.out.println("Tell me something to search");
@@ -77,7 +80,26 @@ public class HallOfFame {
 			}  
 			System.out.println("What genre is " + name);
 			String genreOfBand = scan.next();
-			Band.setGenre(genreOfBand);
+			b1.setGenre(genreOfBand);
+			System.out.println("How many members are there in " + name + "?");
+			int numberOfMembers = scan.nextInt();
+			for(int i = 1; i <= numberOfMembers; i++){
+				String suffix = "";
+				if(i == 1){
+					suffix = "st";
+				}
+				else if(i == 2){
+					suffix = "nd";
+				}
+				else if(i == 3){
+					suffix = "rd";
+				}
+				else if(i >= 4){
+					suffix = "th";
+				}
+				System.out.println("What is the name of the " + i + suffix + " member");
+				String jk = scan.next();
+			}
 			
 			
 			hall();
