@@ -12,6 +12,7 @@ public class HallOfFame {
 		scan = new Scanner(System.in);
 		hall();
 	}
+	//search menu method
 	private static void search(){
 		System.out.println("What would you like to search");
 		System.out.println("A: Band Name");
@@ -19,6 +20,7 @@ public class HallOfFame {
 		System.out.println("C: Band Genre");
 		System.out.println("D: Other");
 		String searchResponse = scan.next();
+		//asks user for choice a answers
 		if(searchResponse.equalsIgnoreCase("A")){
 			System.out.println("Tell me the band name");
 			String nameOfBand = scan.next();
@@ -59,8 +61,14 @@ public class HallOfFame {
 		}
 
 	}
+	//main menu method
 	public static void hall(){
-
+		if (bandList.contains(null)){
+			System.out.println("The hall of fame is empty");
+		}
+		else{
+			
+		}
 		System.out.println("What would you like to do");
 		System.out.println("A: Add Band");
 		System.out.println("B: Remove Band");
@@ -83,8 +91,10 @@ public class HallOfFame {
 			b1.setGenre(genreOfBand);
 			System.out.println("How many members are there in " + name + "?");
 			int numberOfMembers = scan.nextInt();
+			//asks user for each members band name
 			for(int i = 1; i <= numberOfMembers; i++){
 				String suffix = "";
+				//Following if/else statements are for appearance of code
 				if(i == 1){
 					suffix = "st";
 				}
@@ -98,7 +108,7 @@ public class HallOfFame {
 					suffix = "th";
 				}
 				System.out.println("What is the name of the " + i + suffix + " member");
-				String jk = scan.next();
+				String nameoMemb = scan.next();//Does not work at the moment
 			}
 			
 			
@@ -109,15 +119,18 @@ public class HallOfFame {
 			String nameOfBand = scan.next();
 			bandList.remove(1);
 		}
+		//removes a specific band from the hall of fame
 		else if(answer.equalsIgnoreCase("C")){
 			System.out.println("What band would you like to remove from the hall of fame");
 		}
+		//erases hall of fame list
 		else if(answer.equalsIgnoreCase("D")){
+			//Asks user if they really want to remove the hall of fame
 			System.out.println("Are you sure you want to erase the hall of fame. Y/N");
 			String eraseAnswer = scan.next();
 			if(eraseAnswer.equalsIgnoreCase("Y")){
 				bandList.clear();
-				System.out.println("You have deleted the hall of fame :(");
+				System.out.println("You have deleted the hall of fame");
 				hall();
 			}
 			else if(eraseAnswer.equalsIgnoreCase("N")){
