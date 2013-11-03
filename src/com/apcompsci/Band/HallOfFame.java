@@ -129,19 +129,24 @@ public class HallOfFame {
 		//erases hall of fame list
 		else if(answer.equalsIgnoreCase("D")){
 			//Asks user if they really want to remove the hall of fame
-			System.out.println("Are you sure you want to erase the hall of fame. Y/N");
+			System.out.println("Are you sure you want to erase the hall of fame. y/N");
 			String eraseAnswer = scan.next();
-			if(eraseAnswer.equalsIgnoreCase("Y")){
+			if(eraseAnswer.length() == 0){
+				System.out.println("Hall of fame was not deleted");
+				hall();
+			}
+			else if(eraseAnswer.equalsIgnoreCase("Y")){
 				bandList.clear();
 				System.out.println("You have deleted the hall of fame");
 				hall();
 			}
 			else if(eraseAnswer.equalsIgnoreCase("N")){
+				System.out.println("Hall of fame was not deleted");
 				hall();
 			}
 		}
 		else if(answer.equalsIgnoreCase("E")){
-			search();
+			search();//goes to the search method
 		}
 		else if(answer.equalsIgnoreCase("F")){
 			System.exit(0);
