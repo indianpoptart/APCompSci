@@ -76,6 +76,7 @@ public class HallOfFame {
 		System.out.println("D: Clear Hall of Fame");
 		System.out.println("E: Search");
 		System.out.println("F: Quit");
+		System.out.println("G: Open file");
 		String answer = scan.next();
 
 		if(answer.equalsIgnoreCase("A")){
@@ -144,6 +145,9 @@ public class HallOfFame {
 		}
 		else if(answer.equalsIgnoreCase("F")){
 			System.exit(0);
+		}
+		else if(answer.equalsIgnoreCase("G")){
+			IO.openFile();
 		}
 		else {
 			hall();
