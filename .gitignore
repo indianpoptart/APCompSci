@@ -2,3 +2,4 @@
 bin/com/apcompsci/Club/tron.gif
 
 bin/.gitignore
+/bin
